@@ -14,7 +14,7 @@
   border-radius: 10px;
   border: solid 2px var(--color-bg-white);
 
-  transition: scale 0.1s, background-color .05s;
+  transition: scale 0.1s;
 
   &:hover {
     scale: 1.05;
@@ -127,5 +127,33 @@
     color: rgb(60, 60, 60);
     text-wrap: nowrap;
     font-weight: bold;
+  }
+}
+
+@media (max-width: 450px) {
+  .type-icons {
+    justify-content: center;
+  }
+
+  .type-icon-img {
+    width: 50px;
+  }
+
+  .type-icon-img .image {
+    --image-size: 40px;
+    border-width: 1px;
+  }
+
+  .type-icon-img .text {
+    font-size: 12px;
+  }
+
+  .type-icon-button {
+    padding-inline: 4px;
+    padding-block: 4px 1px;
+
+    &:hover {
+      scale: 1;
+    }
   }
 }

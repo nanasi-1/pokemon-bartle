@@ -11,7 +11,7 @@ body {
 }
 
 #root {
-  max-height: calc(100vh - 90px);
+  max-height: calc(100vh - 60px);
   overflow-y: hidden;
   padding-inline: 35px;
   padding-bottom: 60px;
@@ -55,5 +55,28 @@ main {
   &[disabled] {
     background-color: rgb(154, 154, 154);
     cursor: not-allowed;
+  }
+}
+
+@media (max-width: 900px) {
+  .content-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 4fr;
+    row-gap: 30px;
+  }
+}
+
+@media (max-width: 450px) {
+  h1.title {
+    font-size: 20px;
+  }
+
+  #root {
+    padding-bottom: 15px;
+    max-height: calc(100vh - 15px);
+  }
+
+  main {
+    padding-top: 10px;
   }
 }

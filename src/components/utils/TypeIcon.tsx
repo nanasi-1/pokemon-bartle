@@ -11,7 +11,7 @@ interface TypeIconProps {
 export function TypeIconImg({ name, width }: TypeIconProps) {
   return (
     <div className="type-icon-img">
-      <div className={`image size-${width} color-${name}`} />
+      <div className={`image size-${width ?? 65} color-${name}`} />
       <span className="text">{getTypeByName(name).localizedName}</span>
     </div>
   )
