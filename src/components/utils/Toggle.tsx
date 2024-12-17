@@ -1,23 +1,31 @@
 import { useState } from "react"
 import "./toggle.css"
 
-export function Toggle({ value, setValue }: {
+export function Toggle({ value, onChange }: {
   value: boolean
-  setValue: (v: boolean) => void
+  onChange: (v: boolean) => void
 }) {
-  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setValue(e.target.checked)
+  const _onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    onChange(e.target.checked)
   }
   return (
     <label className="toggle-button-1">
-      <input type="checkbox" checked={value} onChange={onChange} />
+      <input type="checkbox" checked={value} onChange={_onChange} />
     </label>
   )
 }
 
 
-export function useToggle() {
+export function useToggle({ onChange }: {
+  onChange?: (v: boolean) => void
+} = {}) {
   const [value, setValue] = useState(false)
-  const component = <Toggle value={value} setValue={setValue} />
+
+  const _onChange = (v: boolean) => {
+    setValue(v)
+    onChange?.(v)
+  }
+
+  const component = <Toggle value={value} onChange={_onChange} />
   return { value, toggle: component, setValue }
 }

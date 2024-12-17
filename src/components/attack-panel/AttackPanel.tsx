@@ -13,7 +13,14 @@ export default function AttackPanel({ correct, pushToAttackLog, restart }: {
   pushToAttackLog: (obj: AttackLogItem) => void
   restart: () => void
 }) {
-  const { value: isAnswer, toggle, setValue: setIsAnswer } = useToggle()
+  // トグルが切り替わったら結果を非表示にする
+  const toggleOnChange = () => setResult('default')
+
+  const { 
+    value: isAnswer, 
+    setValue: setIsAnswer,
+    toggle, 
+  } = useToggle({ onChange: toggleOnChange })
   const max = isAnswer ? 2 : 1 // フックでもちゃんと動くらしい（安心）
   const { typeList, checkedList, updateChecked } = useTypeList(max)
 
@@ -40,6 +47,7 @@ export default function AttackPanel({ correct, pushToAttackLog, restart }: {
   return (
     <div className="attack-panel">
       {typeList}
+      <Result result={result} restart={_restart} />
       {result === 'answer' ? null : isAnswer ?
         <AnswerButton correct={correct} answer={checkedList} onClick={answer} /> :
         <AttackButton from={correct} to={checkedList} onClick={attack} />
@@ -50,7 +58,6 @@ export default function AttackPanel({ correct, pushToAttackLog, restart }: {
           <span className={`toggle-label ${isAnswer ? 'answer' : 'attack'}`}>解答する</span>
         </div>
       }
-      <Result result={result} restart={_restart} />
     </div>
   )
 }
