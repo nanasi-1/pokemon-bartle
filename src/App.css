@@ -61,6 +61,10 @@ main {
   }
 }
 
+a.github-link {
+  margin-left: 5px;
+}
+
 @media (max-width: 900px) {
   .content-wrapper {
     grid-template-columns: 1fr;
