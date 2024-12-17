@@ -1,0 +1,59 @@
+:root {
+  /* By ポケモン図鑑（https://zukan.pokemon.co.jp/） */
+  --color-main: #ec342e;
+  --color-sub: rgb(255, 207, 207);
+  --color-bg-white: #f9f9f9;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg-white);
+}
+
+#root {
+  max-height: calc(100vh - 90px);
+  overflow-y: hidden;
+  padding-inline: 35px;
+  padding-bottom: 60px;
+}
+
+h1.title {
+  height: 5vh;
+  margin: 0;
+  padding-top: 15px;
+}
+
+main {
+  padding-top: 20px;
+  padding-bottom: 60px;
+  height: calc(95vh - 80px);
+}
+
+.content-wrapper {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-template-rows: 100%;
+  column-gap: 30px;
+  align-items: start;
+  position: relative;
+}
+
+.button {
+  background-color: var(--color-main);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: opacity 0.2s, background-color 0.2s;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &[disabled] {
+    background-color: rgb(154, 154, 154);
+    cursor: not-allowed;
+  }
+}

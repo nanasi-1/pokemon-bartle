@@ -1,0 +1,22 @@
+.result {
+  margin-top: 30px;
+  margin-left: var(--left-margin);
+  border: solid 2px var(--color-main);
+  background-color: var(--color-sub);
+  padding-inline: 25px;
+  padding-block: 20px;
+  border-radius: 10px;
+}
+
+.result-text {
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+}
+
+.restart-button {
+  padding-inline: 12px;
+  padding-block: 8px;
+  display: block;
+  margin-top: 15px;
+}

@@ -1,0 +1,40 @@
+.toggle-button-1 {
+  --size: 25px;
+  --inner-size: calc(var(--size) * 0.95);
+
+  display: inline-block;
+  position: relative;
+  width: calc(var(--inner-size) * 2);
+  height: var(--inner-size);
+  border-radius: var(--size);
+  background-color: #dddddd;
+  cursor: pointer;
+  transition: background-color .3s;
+}
+
+.toggle-button-1:has(:checked) {
+  background-color: var(--color-main);
+}
+
+.toggle-button-1::after {
+  position: absolute;
+  top: calc((var(--inner-size) - var(--size)) / 2);
+  left: 0;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgb(0 0 0 / 20%);
+  background-color: #fff;
+  content: '';
+  transition: left .2s;
+  border: solid 1px rgb(155, 155, 155);
+}
+
+.toggle-button-1:has(:checked)::after {
+  left: var(--size);
+  border-color: #f54d5e;
+}
+
+.toggle-button-1 input {
+  display: none;
+}

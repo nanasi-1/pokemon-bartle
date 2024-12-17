@@ -1,0 +1,43 @@
+.attack-panel {
+  --left-margin: 12px;
+
+  height: calc(100% - 20px);
+  padding-block: 10px;
+  width: 100%;
+  overflow-y: scroll;
+
+  .type-icons {
+    margin-left: calc(var(--left-margin) - 10px);
+  }
+
+  .attack-panel-button {
+    margin-top: 20px;
+  }
+
+  .attack-toggle-wrapper {
+    margin-top: 25px;
+  }
+}
+
+.attack-toggle-wrapper,
+.attack-panel-button {
+  margin-left: var(--left-margin);
+}
+
+.attack-toggle-wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+
+.attack-panel-button {
+  padding-block: 10px;
+  width: calc(100% - var(--left-margin));
+}
+
+.toggle-label {
+  margin-left: 5px;
+  &.attack {
+    color: rgb(97, 96, 96);
+  }
+}

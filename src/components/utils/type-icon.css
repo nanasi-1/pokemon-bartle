@@ -1,0 +1,131 @@
+.type-icons {
+  display: flex;
+  column-gap: 10px;
+  row-gap: 10px;
+  flex-wrap: wrap;
+}
+
+.type-icon-button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding-block: 8px 2px;
+  padding-inline: 8px;
+  border-radius: 10px;
+  border: solid 2px var(--color-bg-white);
+
+  transition: scale 0.1s, background-color .05s;
+
+  &:hover {
+    scale: 1.05;
+  }
+
+  &.checked {
+    background-color: var(--color-sub);
+    border-color: var(--color-main);
+  }
+}
+
+.type-icon-img {
+  width: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  .image {
+    --image-size: 65px;
+    border: solid 2px var(--color-bg-white);
+    border-radius: 10px;
+    width: var(--image-size);
+    height: var(--image-size);
+    min-width: var(--image-size);
+    min-height: var(--image-size);
+
+    &.size-40 {
+      --image-size: 40px;
+    }
+
+    &.color-normal {
+      background-color: rgb(189, 189, 189);
+    }
+
+    &.color-fighting {
+      background-color: rgb(255, 167, 66);
+    }
+
+    &.color-flying {
+      background-color: rgb(156, 204, 243);
+    }
+
+    &.color-poison {
+      background-color: rgb(196, 94, 218);
+    }
+
+    &.color-ground {
+      background-color: rgb(204, 131, 49);
+    }
+
+    &.color-rock {
+      background-color: rgb(195, 187, 139);
+    }
+
+    &.color-bug {
+      background-color: rgb(187, 205, 50);
+    }
+
+    &.color-ghost {
+      background-color: rgb(147, 108, 205);
+    }
+
+    &.color-steel {
+      background-color: rgb(121, 196, 215);
+    }
+
+    &.color-fire {
+      background-color: rgb(255, 142, 113);
+    }
+
+    &.color-water {
+      background-color: rgb(115, 163, 246);
+    }
+
+    &.color-grass {
+      background-color: rgb(103, 223, 98)
+    }
+
+    &.color-electric {
+      background-color: rgb(228, 228, 73);
+    }
+
+    &.color-psychic {
+      background-color: rgb(255, 142, 180);
+    }
+
+    &.color-ice {
+      background-color: rgb(113, 226, 246);
+    }
+
+    &.color-dragon {
+      background-color: rgb(124, 137, 221);
+    }
+
+    &.color-dark {
+      background-color: rgb(128, 128, 128);
+    }
+
+    &.color-fairy {
+      background-color: rgb(248, 163, 238);
+    }
+  }
+
+  .text {
+    margin: 0;
+    padding-top: 4px;
+    display: block;
+    font-size: 14px;
+    text-align: center;
+    color: rgb(60, 60, 60);
+    text-wrap: nowrap;
+    font-weight: bold;
+  }
+}
