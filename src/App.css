@@ -8,25 +8,28 @@
 body {
   margin: 0;
   background-color: var(--color-bg-white);
+  font-family: Arial, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  color: rgb(43, 43, 43);
 }
 
 #root {
   max-height: calc(100vh - 60px);
-  overflow-y: hidden;
   padding-inline: 35px;
   padding-bottom: 60px;
 }
 
 h1.title {
-  height: 5vh;
+  height: calc(7vh - 30px);
   margin: 0;
-  padding-top: 15px;
+  padding-block: 15px;
+  letter-spacing: 1px;
+  text-align: center;
 }
 
 main {
   padding-top: 20px;
   padding-bottom: 60px;
-  height: calc(95vh - 80px);
+  height: calc(93vh - 80px);
 }
 
 .content-wrapper {
@@ -68,7 +71,8 @@ main {
 
 @media (max-width: 450px) {
   h1.title {
-    font-size: 20px;
+    font-size: 21px;
+    height: calc(5vh - 30px);
   }
 
   #root {
