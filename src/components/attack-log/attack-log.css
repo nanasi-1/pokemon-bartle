@@ -11,7 +11,7 @@
 }
 
 .attack-log-item {
-  padding-inline: 8px;
+  padding-inline: 0px;
   padding-block: 8px;
   margin-block: auto;
   display: grid;
@@ -29,6 +29,31 @@
     .text {
       font-size: 18px;
       font-weight: normal;
+      padding-top: 0px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .attack-log-item {
+    grid-template-columns: 3fr 1fr 2fr;
+    padding-inline: 15px;
+
+    span:not([class]) {
+      font-size: 14px;
+    }
+
+    .type-icon-img {
+      place-self: start;
+      column-gap: 8px;
+    }
+
+    .type-icon-img .image {
+      --image-size: 25px;
+    }
+
+    .type-icon-img .text {
+      font-size: 15px;
     }
   }
 }

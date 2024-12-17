@@ -41,3 +41,13 @@
     color: rgb(97, 96, 96);
   }
 }
+
+@media (max-width: 450px) {
+  .attack-panel {
+    padding-block: 0;
+
+    .type-icons {
+      margin-left: 0;
+    }
+  }
+}

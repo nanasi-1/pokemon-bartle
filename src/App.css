@@ -74,9 +74,16 @@ main {
   #root {
     padding-bottom: 15px;
     max-height: calc(100vh - 15px);
+    padding-inline: 30px;
   }
 
   main {
     padding-top: 10px;
+    padding-bottom: 20px;
+    height: calc(95vh - 30px);
+  }
+
+  .content-wrapper {
+    row-gap: 15px;
   }
 }
