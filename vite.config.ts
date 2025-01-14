@@ -6,7 +6,10 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [
     react(),
-    sitemap()
+    sitemap({ 
+      hostname: 'https://nanasi-1.github.io/',
+      basePath: '/pokemon-bartle'
+    })
   ],
   base: './'
 })
