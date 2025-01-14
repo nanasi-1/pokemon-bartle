@@ -8,7 +8,8 @@ export default defineConfig({
     react(),
     sitemap({ 
       hostname: 'https://nanasi-1.github.io/',
-      basePath: '/pokemon-bartle'
+      basePath: '/pokemon-bartle',
+      generateRobotsTxt: false
     })
   ],
   base: './'
